@@ -183,7 +183,7 @@ def as_numpy(dataset: Tree[TensorflowElem]) -> Tree[NumpyElem]:
   ds = tfds.load(name="mnist", split="train")
   ds_numpy = tfds.as_numpy(ds)  # Convert `tf.data.Dataset` to Python generator
   for ex in ds_numpy:
-    # `{'image': np.array(shape=(28, 28, 1)), 'labels': np.array(shape=())}`
+    # `{'image': np.array(shape=(28, 28, 1)), 'label': np.array(shape=())}`
     print(ex)
   ```
 
